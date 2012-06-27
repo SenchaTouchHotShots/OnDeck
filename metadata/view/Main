@@ -1,0 +1,239 @@
+{
+    "id": "ExtBox1-ext-gen2090",
+    "type": "tabpanel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "id": "mainView",
+        "designer|userClassName": "Main"
+    },
+    "customConfigs": [],
+    "designerId": "e032fea4-128c-4274-a2f6-6bf165c73431",
+    "$viewOrder": 0,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen2112",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "designer|userClassName": "MyContainer1",
+                "title": "Decks",
+                "iconCls": "info"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen3821",
+                    "type": "list",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "itemTpl": "<div>{name}</div>",
+                        "store": "DeckStore",
+                        "designer|userClassName": "MyList"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                },
+                {
+                    "id": "ExtBox1-ext-gen6554",
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "title": "Decks",
+                        "designer|userClassName": "MyTitleBar"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen6806",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mybutton",
+                                "text": "Add",
+                                "designer|userClassName": "MyButton",
+                                "align": "right"
+                            },
+                            "customConfigs": [],
+                            "expanded": true,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen13679",
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "showDeckSheet",
+                                        "implHandler": [
+                                            "var sheet = Ext.create('MyApp.view.addDeckSheet');",
+                                            "var main = Ext.getCmp('mainView');",
+                                            "main.add(sheet);",
+                                            "sheet.show();"
+                                        ],
+                                        "name": "tap",
+                                        "designer|userClassName": "showDeckSheet"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen2104",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyContainer",
+                "title": "Cards",
+                "iconCls": "info"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen7188",
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "designer|userClassName": "MyTitleBar1"
+                    },
+                    "customConfigs": [],
+                    "expanded": true,
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen7388",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "itemId": "mybutton1",
+                                "text": "Add",
+                                "designer|userClassName": "MyButton1",
+                                "align": "right"
+                            },
+                            "customConfigs": [],
+                            "expanded": true,
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen16418",
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "fn": "showCardSheet",
+                                        "implHandler": [
+                                            "var sheet = Ext.create('MyApp.view.addCardSheet');",
+                                            "var main = Ext.getCmp('mainView');",
+                                            "main.add(sheet);",
+                                            "sheet.show();"
+                                        ],
+                                        "name": "tap",
+                                        "designer|userClassName": "showCardSheet"
+                                    },
+                                    "customConfigs": [],
+                                    "expanded": true
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen6228",
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "ui": null,
+                                "icon": null,
+                                "iconAlign": null,
+                                "iconCls": null,
+                                "text": "Shuffle",
+                                "designer|userClassName": "MyButton6"
+                            },
+                            "customConfigs": [],
+                            "expanded": true
+                        }
+                    ]
+                },
+                {
+                    "id": "ExtBox1-ext-gen7733",
+                    "type": "carousel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyCarousel"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen2783",
+            "type": "tabbar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom",
+                "designer|userClassName": "MyTabBar"
+            },
+            "customConfigs": [],
+            "iconCls": "icon-tab-bar",
+            "expanded": true
+        }
+    ]
+}

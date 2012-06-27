@@ -1,0 +1,90 @@
+{
+    "id": "ExtBox1-ext-gen8798",
+    "type": "sheet",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "id": "addDeckSheet",
+        "designer|userClassName": "addDeckSheet",
+        "designer|userAlias": "addDeckSheet"
+    },
+    "customConfigs": [],
+    "designerId": "a245f51c-1452-42ca-b66d-7ddb145f4e4b",
+    "$viewOrder": 1,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen9061",
+            "type": "textfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "margin": "0 0 10 0",
+                "label": "Name",
+                "designer|userClassName": "MyTextField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9309",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "Save",
+                "designer|userClassName": "MyButton2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen9613",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "mybutton3",
+                "ui": "decline",
+                "text": "Cancel",
+                "designer|userClassName": "MyButton3"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen13035",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "hideDeckSheet",
+                        "implHandler": [
+                            "button.up('sheet').hide();"
+                        ],
+                        "name": "tap",
+                        "designer|userClassName": "hideDeckSheet"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        }
+    ]
+}

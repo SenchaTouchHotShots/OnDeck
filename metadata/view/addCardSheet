@@ -1,0 +1,139 @@
+{
+    "id": "ExtBox1-ext-gen10228",
+    "type": "sheet",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "html": null,
+        "id": "addCardSheet",
+        "designer|userClassName": "addCardSheet"
+    },
+    "customConfigs": [],
+    "designerId": "f4bec39f-703e-4796-95a6-bb8cf2b47c02",
+    "$viewOrder": 2,
+    "expanded": true,
+    "cn": [
+        {
+            "id": "ExtBox1-ext-gen5415",
+            "type": "container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "html": "Deck Name Here",
+                "style": "color: #FFFFFF; text-align:center;",
+                "designer|userClassName": "MyContainer2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10232",
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "cardQuestion",
+                "margin": "0 0 10 0",
+                "label": "Question",
+                "designer|userClassName": "MyTextArea"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10992",
+            "type": "textareafield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "cardAnswer",
+                "margin": "0 0 10 0",
+                "label": "Answer",
+                "designer|userClassName": "MyTextArea"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10236",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ui": "confirm",
+                "text": "Save",
+                "designer|userClassName": "MyButton2"
+            },
+            "customConfigs": [],
+            "expanded": true
+        },
+        {
+            "id": "ExtBox1-ext-gen10240",
+            "type": "button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "itemId": "mybutton5",
+                "ui": "decline",
+                "text": "Cancel",
+                "designer|userClassName": "MyButton3"
+            },
+            "customConfigs": [],
+            "expanded": true,
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen11979",
+                    "type": "basiceventbinding",
+                    "reference": {
+                        "name": "listeners",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "fn": "hideCardSheet",
+                        "implHandler": [
+                            "button.up('sheet').hide();"
+                        ],
+                        "name": "tap",
+                        "designer|userClassName": "hideCardSheet"
+                    },
+                    "customConfigs": [],
+                    "expanded": true
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen11385",
+            "type": "hiddenfield",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "deckID",
+                "designer|userClassName": "MyHiddenField"
+            },
+            "customConfigs": [],
+            "expanded": true
+        }
+    ]
+}
