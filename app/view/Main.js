@@ -101,16 +101,20 @@ Ext.define('MyApp.view.Main', {
     },
 
     showDeckSheet: function(button, e, options) {
-        var sheet = Ext.create('MyApp.view.addDeckSheet');
-        var main = Ext.getCmp('mainView');
-        main.add(sheet);
+        var main = Ext.getCmp('mainView'), sheet = Ext.getCmp('addDeckSheet');
+	if (!sheet) {
+	   sheet =  Ext.create('MyApp.view.addDeckSheet');
+	    main.add(sheet);
+	}
         sheet.show();
     },
 
     showCardSheet: function(button, e, options) {
-        var sheet = Ext.create('MyApp.view.addCardSheet');
-        var main = Ext.getCmp('mainView');
-        main.add(sheet);
+        var main = Ext.getCmp('mainView'), sheet = Ext.getCmp('addCardSheet');
+	if (!sheet) {
+	   sheet =  Ext.create('MyApp.view.addCardSheet');
+	    main.add(sheet);
+	}
         sheet.show();
     }
 

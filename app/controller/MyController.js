@@ -123,7 +123,7 @@ Ext.define('MyApp.controller.MyController', {
 	cards.sort('id', 'ASC');
 	cards.filter('deckID', model.get('id'));
 	this.getMainView().down('#cardsPanel').enable();
-	this.getMainView().setActiveitem(1);
+	this.getMainView().setActiveItem(1);
     },
 
     updateCardSheetDeckInfo: function(sheet) {

@@ -46,7 +46,7 @@ Ext.define('MyApp.view.CardView', {
     },
     createFlashCard: function(record, index, total) {
 	var data = Ext.apply({ total: total, number: (index + 1) }, record.data);
-	this.add({ xtype: 'panel', html: this.getQuestionTpl().apply(data) });
-	this.add({ xtype: 'panel', html: this.getAnswerTpl().apply(data) });
+	this.add({ xtype: 'panel', html: this.getQuestionTpl().apply(data), scrollable: 'vertical' });
+	this.add({ xtype: 'panel', html: this.getAnswerTpl().apply(data), scrollable: 'vertical' });
     }
 });
