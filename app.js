@@ -44,6 +44,9 @@ Ext.application({
         'addDeckSheet'
     ],
     name: 'MyApp',
+    controllers: [
+        'MyController'
+    ],
 
     launch: function() {
 

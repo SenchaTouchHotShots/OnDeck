@@ -1,6 +1,6 @@
 {
-    "id": "ExtBox1-ext-gen2042",
-    "type": "application",
+    "id": "ExtBox1-ext-gen2508",
+    "type": "controller",
     "reference": {
         "name": "items",
         "type": "array"
@@ -17,16 +17,13 @@
         ],
         "views": [
             "Main",
+            "addCardSheet",
             "addDeckSheet"
         ],
-        "name": "MyApp",
-        "controllers": [
-            "MyController"
-        ]
+        "designer|userClassName": "MyController"
     },
     "customConfigs": [],
-    "designerId": "application",
+    "designerId": "7c0bdeb4-cbcc-4252-ab30-040375748ada",
     "$viewOrder": 0,
-    "iconCls": "icon-application",
     "expanded": true
 }
