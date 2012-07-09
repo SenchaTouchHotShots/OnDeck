@@ -13,11 +13,24 @@
  * Do NOT hand edit this file.
  */
 
+Ext.Loader.setPath({
+    'Ext.io': 'lib/io/src/io',
+    'Ext.cf': 'lib/io/src/cf'
+});
+
 Ext.Loader.setConfig({
     enabled: true
 });
 
 Ext.application({
+    /* Sencha IO Configs: */
+    config: {
+	io: {
+	    appId: '', /* Do not commit these to a public git repository. That'd be bad. */
+	    appSecret: ''
+	    }
+    },
+    controllers: ['Ext.io.Controller'],
     models: [
         'Deck',
         'Card'

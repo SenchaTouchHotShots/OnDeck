@@ -23,11 +23,15 @@ Ext.define('MyApp.store.CardStore', {
         model: 'MyApp.model.Card',
         storeId: 'CardStore',
         proxy: {
-            type: 'ajax',
-            url: 'http://FlashCards.dev/api/cards.json',
-            reader: {
-                type: 'json'
-            }
-        }
+            type: 'syncstorage',
+	    id: 'cards',
+	    owner: 'user',
+	    access: 'private'
+        },
+	autoLoad: true,  //set auto load to true so that any local data will 
+                         // populated in memory
+        autoSync: false // Wait until we have an authenciated user to
+                         // and call sync manually.
+        
     }
 });
