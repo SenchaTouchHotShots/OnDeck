@@ -30,7 +30,7 @@ Ext.application({
 	    appSecret: ''
 	    }
     },
-    controllers: ['Ext.io.Controller'],
+    controllers: ['Ext.io.Controller', 'MyController'],
     models: [
         'Deck',
         'Card'
@@ -44,9 +44,6 @@ Ext.application({
         'addDeckSheet'
     ],
     name: 'MyApp',
-    controllers: [
-        'MyController'
-    ],
 
     launch: function() {
 
