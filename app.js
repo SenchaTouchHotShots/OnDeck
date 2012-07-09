@@ -41,7 +41,9 @@ Ext.application({
     ],
     views: [
         'Main',
-        'addDeckSheet'
+        'addDeckSheet',
+	'addCardSheet',
+	'CardView'
     ],
     name: 'MyApp',
 

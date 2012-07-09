@@ -28,7 +28,8 @@ Ext.define('MyApp.controller.MyController', {
         views: [
             'Main',
             'addCardSheet',
-            'addDeckSheet'
+            'addDeckSheet',
+	    'CardView'
         ],
 	refs: {
 	    addCardSheet: '#addCardSheet',
@@ -36,7 +37,8 @@ Ext.define('MyApp.controller.MyController', {
 	    addDeckSheet: '#addDeckSheet',
 	    addDeckSaveButton: '#addDeckSheet button[text="Save"]',
 	    deckList: '#deckList',
-	    mainView: '#mainView'
+	    mainView: '#mainView',
+	    shuffle: 'button[text="Shuffle"]'
 	},
 	control: {
 	    addCardSaveButton: {
@@ -50,6 +52,9 @@ Ext.define('MyApp.controller.MyController', {
 	    },
 	    addCardSheet: {
 		show: "updateCardSheetDeckInfo"
+	    },
+	    shuffle: {
+		tap: 'shuffleDeck'
 	    }
 	}
     },
@@ -103,14 +108,20 @@ Ext.define('MyApp.controller.MyController', {
         cardStore.load();
         return true;
     },
+    shuffleDeck: function() {
+	Ext.getStore('CardStore').sort({
+	    sorterFn: function() {
+		return (Math.round(Math.random())-0.5);
+	    }
+	});
+    },
 
     onDeckSelected: function(list, model) {
 	var cards = Ext.getStore('CardStore');
 	this.setSelectedDeck(model);
-//	cards.clearFilter();
+	cards.clearFilter();
+	cards.sort('id', 'ASC');
 	cards.filter('deckID', model.get('id'));
-	console.log('DS:');
-	console.log(cards);
 	this.getMainView().down('#cardsPanel').enable();
     },
 

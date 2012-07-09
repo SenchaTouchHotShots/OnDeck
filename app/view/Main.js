@@ -53,6 +53,9 @@ Ext.define('MyApp.view.Main', {
             {
                 xtype: 'container',
                 title: 'Cards',
+		layout: {
+                    type: 'fit'
+                },
 		disabled: true,
 		id: 'cardsPanel',
                 iconCls: 'info',
@@ -74,7 +77,8 @@ Ext.define('MyApp.view.Main', {
                         ]
                     },
                     {
-                        xtype: 'carousel'
+                        xtype: 'flashcards',
+			store: 'CardStore'
                     }
                 ]
             }
