@@ -16,6 +16,7 @@
 Ext.define('MyApp.controller.MyController', {
     extend: 'Ext.app.Controller',
     config: {
+	selectedDeck: false,
         models: [
             'Deck',
             'Card'
@@ -28,7 +29,29 @@ Ext.define('MyApp.controller.MyController', {
             'Main',
             'addCardSheet',
             'addDeckSheet'
-        ]
+        ],
+	refs: {
+	    addCardSheet: '#addCardSheet',
+	    addCardSaveButton: '#addCardSheet button[text="Save"]',
+	    addDeckSheet: '#addDeckSheet',
+	    addDeckSaveButton: '#addDeckSheet button[text="Save"]',
+	    deckList: '#deckList',
+	    mainView: '#mainView'
+	},
+	control: {
+	    addCardSaveButton: {
+		tap: "addCard"
+	    },
+	    addDeckSaveButton: {
+		tap: "addDeck"
+	    },
+	    deckList: {
+		select: "onDeckSelected"
+	    },
+	    addCardSheet: {
+		show: "updateCardSheetDeckInfo"
+	    }
+	}
     },
     /**
     *  When the controller is created it needs to 
@@ -62,7 +85,7 @@ Ext.define('MyApp.controller.MyController', {
             console.log("DeckStore sync callback", arguments);
         });
         Ext.getStore('CardStore').sync(function() {
-            console.log("DeckStore sync callback", arguments);
+            console.log("CardStore sync callback", arguments);
         });
         return true;
     },
@@ -81,36 +104,45 @@ Ext.define('MyApp.controller.MyController', {
         return true;
     },
 
-    /**
-    * Add the task to the store from the value in a textfield.  
-    * Call sync on the store to push changes to sencha.io
-    * After sync completes call syncCallback.
-    */
-    addTodo: function(textfield, e, options) {
-        console.log("addTodo");
-        var todos = Ext.getStore('todos');
-        todos.add({
-            task: textfield.getValue(),
-            completed: false,
-            timestamp: new Date().getTime()
-        });
-        todos.sync(Ext.bind(this.syncCallback, this));
-        textfield.setValue("");
+    onDeckSelected: function(list, model) {
+	var cards = Ext.getStore('CardStore');
+	this.setSelectedDeck(model);
+//	cards.clearFilter();
+	cards.filter('deckID', model.get('id'));
+	console.log('DS:');
+	console.log(cards);
+	this.getMainView().down('#cardsPanel').enable();
     },
 
-    /**
-    * on a swipe on a list item the application reverses the completed  
-    * value of the record.
-    * Call sync on the store to push changes to sencha.io
-    * After sync completes call syncCallback.
-    */
-    toggleTodo: function(dataview, index, target, record, e, options) {
-        console.log("swipe?")
-        var completed = record.get('completed');
-        record.set("completed", !completed);
-        var todos = Ext.getStore('todos');
-        todos.sync(Ext.bind(this.syncCallback, this));
+    updateCardSheetDeckInfo: function(sheet) {
+	sheet.down('#deckName').setHtml(this.getSelectedDeck().get('name'));
+    },
 
+    addCard: function() {
+        console.log("addCard");
+        var cards = Ext.getStore('CardStore'),
+	    sheet = this.getAddCardSheet();
+        cards.add({
+	    deckID: this.getSelectedDeck().get('id'),
+            question: sheet.down('#cardQuestion').getValue(),
+            answer: sheet.down('#cardAnswer').getValue()
+        });
+        cards.sync(Ext.bind(this.syncCallback, this));
+	sheet.down('#cardQuestion').setValue("");
+	sheet.down('#cardAnswer').setValue("");
+	sheet.hide();
+    },
+
+    addDeck: function() {
+        console.log("addDeck");
+        var decks = Ext.getStore('DeckStore'),
+	    sheet = this.getAddDeckSheet();
+        decks.add({
+            name: sheet.down('textfield').getValue()
+        });
+        decks.sync(Ext.bind(this.syncCallback, this));
+        sheet.down('textfield').setValue("");
+	sheet.hide();
     },
 
     /*

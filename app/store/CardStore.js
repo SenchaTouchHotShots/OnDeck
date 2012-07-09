@@ -28,6 +28,7 @@ Ext.define('MyApp.store.CardStore', {
 	    owner: 'user',
 	    access: 'private'
         },
+	remoteFilter: false,
 	autoLoad: true,  //set auto load to true so that any local data will 
                          // populated in memory
         autoSync: false // Wait until we have an authenciated user to

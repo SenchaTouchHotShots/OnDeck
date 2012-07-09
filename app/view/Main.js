@@ -29,6 +29,7 @@ Ext.define('MyApp.view.Main', {
                 items: [
                     {
                         xtype: 'list',
+			id: 'deckList',
                         itemTpl: [
                             '<div>{name}</div>'
                         ],
@@ -52,6 +53,8 @@ Ext.define('MyApp.view.Main', {
             {
                 xtype: 'container',
                 title: 'Cards',
+		disabled: true,
+		id: 'cardsPanel',
                 iconCls: 'info',
                 items: [
                     {

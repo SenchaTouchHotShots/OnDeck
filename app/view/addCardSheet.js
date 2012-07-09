@@ -20,7 +20,8 @@ Ext.define('MyApp.view.addCardSheet', {
         id: 'addCardSheet',
         items: [
             {
-                xtype: 'container',
+		id: 'deckName',
+                xtype: 'panel',
                 html: 'Deck Name Here',
                 style: 'color: #FFFFFF; text-align:center;'
             },
