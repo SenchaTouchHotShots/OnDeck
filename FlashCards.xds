@@ -80,6 +80,14 @@
                 "metadata/resource/css"
             ],
             "className": "css"
+        },
+        "7c0bdeb4-cbcc-4252-ab30-040375748ada": {
+            "paths": [
+                "metadata/controller/MyController",
+                "app/controller/override/MyController.js",
+                "app/controller/MyController.js"
+            ],
+            "className": "MyController"
         }
     },
     "expandedState": {

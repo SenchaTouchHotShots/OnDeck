@@ -24,13 +24,15 @@ Ext.define('MyApp.store.DeckStore', {
         model: 'MyApp.model.Deck',
         storeId: 'DeckStore',
         proxy: {
-            type: 'ajax',
-            enablePagingParams: false,
-            url: 'http://FlashCards.dev/api/decks.json',
-            reader: {
-                type: 'json',
-                rootProperty: 'data'
-            }
-        }
+            type: 'syncstorage',
+	    id: 'decks',
+	    owner: 'user',
+	    access: 'private',
+            enablePagingParams: false
+        },
+	autoLoad: true,  //set auto load to true so that any local data will 
+                         // populated in memory
+        autoSync: false // Wait until we have an authenciated user to
+                         // and call sync manually.
     }
 });

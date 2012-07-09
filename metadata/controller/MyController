@@ -1,0 +1,29 @@
+{
+    "id": "ExtBox1-ext-gen2508",
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "models": [
+            "Deck",
+            "Card"
+        ],
+        "stores": [
+            "DeckStore",
+            "CardStore"
+        ],
+        "views": [
+            "Main",
+            "addCardSheet",
+            "addDeckSheet"
+        ],
+        "designer|userClassName": "MyController"
+    },
+    "customConfigs": [],
+    "designerId": "7c0bdeb4-cbcc-4252-ab30-040375748ada",
+    "$viewOrder": 0,
+    "expanded": true
+}
