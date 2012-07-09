@@ -3,8 +3,8 @@ Ext.define('MyApp.view.CardView', {
     alias: 'widget.flashcards',
     config: {
 	store: null,
-	questionTpl: '<b>Question {number} of {total}</b>:<br />{question}',
-	answerTpl: '<b>Question {number} of {total}</b>:<br />{question}<br /><b>Answer:</b><br />{answer}',
+	questionTpl: '<div class="question qa"><span class="count">{number} of {total}</span><span class="question">{question}</span></div>',
+	answerTpl: '<div class="question qa"><span class="count">{number} of {total}</span><span class="question">{question}</span></div><div class="answer qa"><span class="answer">{answer}</span></div>',
 	indicator: false // set this to false because there are 2 cards per question, thus two indicator blips, which may be confusing.
     },
     constructor: function(config) {

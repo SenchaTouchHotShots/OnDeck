@@ -1,0 +1,98 @@
+.x-carousel-item {
+    padding-top: 20px;
+}
+
+div.qa {
+    -webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .3);
+box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, .3);
+min-height: 200px;
+width: 400px;
+margin-left: auto;
+margin-right: auto;
+clear: both;
+position: relative;
+margin-top: 20px;
+padding-top: 10px;
+}
+
+div.question:before {
+    font-size: 55px;
+    line-height: 40px;
+    padding-right: 6px;
+    padding-left: 5px;
+    float: left;
+    content: 'Q:';
+    text-shadow: 2px 2px 5px #666;
+   filter: dropshadow(color=#666, offx=2, offy=2);
+   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+   font-weight: bold;
+}
+
+div.question {
+background: rgb(254,252,234); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(255,255,153,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(255,255,153,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(255,255,153,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(255,255,153,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(255,255,153,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(255,255,153,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#ffff99',GradientType=0 ); /* IE6-9 */
+padding-bottom: 15px;
+}
+
+
+div.answer:before {
+    font-size: 55px;
+    line-height: 40px;
+    padding-right: 6px;
+    padding-left: 5px;
+    float: left;
+    content: 'A:';
+    text-shadow: 2px 2px 5px #666;
+   filter: dropshadow(color=#666, offx=2, offy=2);
+   font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+   font-weight: bold;
+}
+
+div.answer {
+background: rgb(254,252,234); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(254,252,234,1) 0%, rgba(204,255,153,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(254,252,234,1)), color-stop(100%,rgba(204,255,153,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(204,255,153,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(204,255,153,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  rgba(254,252,234,1) 0%,rgba(204,255,153,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom,  rgba(254,252,234,1) 0%,rgba(204,255,153,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#ccff99',GradientType=0 ); /* IE6-9 */
+
+}
+
+span.count {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+    font-size: 10px;
+    color: #666666;
+}
+
+span.question {
+    font-size: 16px;
+}
+
+span.answer {
+    font-size: 16px;
+}
+
+/* Smartphones (portrait & landscape) ----------- */
+@media only screen 
+and (min-width : 320px) 
+and (max-width : 480px) {
+/* Styles */
+
+    div.qa {
+	min-height: 125px;
+	width: 300px;
+    }
+}
