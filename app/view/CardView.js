@@ -9,23 +9,23 @@ Ext.define('MyApp.view.CardView', {
     },
     constructor: function(config) {
 	this.callParent(arguments);
-	
-        if (!this.getQuestionTpl().compile) {
+	// the if thens are for reusability purposes
+  if (!this.getQuestionTpl().compile) {
 	    this.setQuestionTpl(new Ext.XTemplate(this.getQuestionTpl()));
 	}
 	this.getQuestionTpl().compile();
 
-	
+
 	if (!this.getAnswerTpl().compile) {
 	    this.setAnswerTpl(new Ext.XTemplate(this.getAnswerTpl()));
 	}
 	this.getAnswerTpl().compile();
-	
+
 	if (!this.getStore().storeId) {
 	    this.setStore(Ext.getStore(this.getStore()));
 	}
 
-	
+
 	this.getStore().on({
 	    load: this.createCards,
 	    refresh: this.createCards,
@@ -36,9 +36,9 @@ Ext.define('MyApp.view.CardView', {
     },
     createCards: function() {
 	var store = this.getStore();
-	this.removeAll();
+	this.removeAll(); // removes all the old panels
 	if (store.getCount() > 0) {
-	store.each(this.createFlashCard, this);
+	  store.each(this.createFlashCard, this); // grabs each store record and creates the two card panels
 	} else {
 	    this.add({xtype: 'panel', html: 'No Cards Available for this Deck.<br />Please click Add to add a card to this deck.'});
 	}

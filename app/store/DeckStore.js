@@ -25,12 +25,12 @@ Ext.define('MyApp.store.DeckStore', {
         storeId: 'DeckStore',
         proxy: {
             type: 'syncstorage',
-	    id: 'decks',
-	    owner: 'user',
-	    access: 'private',
+            id: 'decks',
+            owner: 'user',
+            access: 'private',
             enablePagingParams: false
         },
-	autoLoad: true,  //set auto load to true so that any local data will 
+	      autoLoad: true,  //set auto load to true so that any local data will
                          // populated in memory
         autoSync: false // Wait until we have an authenciated user to
                          // and call sync manually.

@@ -77,8 +77,8 @@ Ext.define('MyApp.view.Main', {
                         ]
                     },
                     {
-                        xtype: 'flashcards',
-			store: 'CardStore'
+                      xtype: 'flashcards',
+                      store: 'CardStore'
                     }
                 ]
             }
