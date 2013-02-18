@@ -1,0 +1,89 @@
+{
+    "type": "controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyController"
+    },
+    "id": "ExtBox1-ext-gen3964",
+    "designerId": "99cd8884-3494-4f2c-9b1c-8575e021a164",
+    "cn": [
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "addRecord",
+                "fn": "addRecord",
+                "designer|params": [
+                    "target"
+                ],
+                "implHandler": [
+                    "var store = Ext.getStore(\"MyStore\");",
+                    "",
+                    "Ext.Msg.prompt(",
+                    "'Add Record',",
+                    "'Enter some Text',",
+                    "function (buttonId, value) {",
+                    "    if(value && value.length > 0) {",
+                    "        store.add({label: value});",
+                    "        store.sync();",
+                    "    }",
+                    "},",
+                    "null,",
+                    "false,",
+                    "null,",
+                    "{ autoCapitalize : true, placeHolder : 'Save something' }",
+                    ");",
+                    "",
+                    ""
+                ],
+                "name": "tap",
+                "designer|controlQuery": "button[action=addRecord]"
+            },
+            "designerId": "4ba8fa76-dd72-4724-8617-a9754d4655e4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "refreshStore",
+                "fn": "refreshStore",
+                "designer|params": [
+                    "target"
+                ],
+                "implHandler": [
+                    "var store = Ext.getStore(\"MyStore\");",
+                    "",
+                    "store.sync(function(){ console.log(\"sync complete\");",
+                    "});"
+                ],
+                "name": "tap",
+                "designer|controlQuery": "button[action=refreshList]"
+            },
+            "designerId": "441e1be2-c707-4934-b221-387cf28834dd"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Reference"
+            },
+            "designerId": "4b53ef09-3edd-43b6-9b62-ca4df77658ae"
+        }
+    ]
+}

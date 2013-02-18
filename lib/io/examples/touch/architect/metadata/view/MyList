@@ -1,0 +1,109 @@
+{
+    "type": "list",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "MyList",
+        "designer|initialView": true,
+        "store": "MyStore"
+    },
+    "id": "ExtBox1-ext-gen2066",
+    "designerId": "6504b5cd-2d15-48cd-b63d-48a6eadd89d4",
+    "cn": [
+        {
+            "type": "template",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "itemTpl",
+                "implHandler": [
+                    "<div>{label}</div>"
+                ],
+                "designer|displayName": "itemTpl"
+            },
+            "designerId": "18f5a194-eab7-4663-bc62-1bcd907a9756"
+        },
+        {
+            "type": "titlebar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "MyTitleBar",
+                "docked": "top",
+                "title": "Test"
+            },
+            "designerId": "68e8995d-efb2-47d4-9633-71ab24debbc7",
+            "cn": [
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "refreshList",
+                        "designer|userClassName": "MyButton",
+                        "ui": "plain",
+                        "icon": "",
+                        "iconCls": "refresh",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "09013188-b47f-4b34-8769-4f41ff1a4ec6",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "action": "addRecord",
+                        "designer|userClassName": "MyButton",
+                        "ui": "plain",
+                        "icon": "",
+                        "iconCls": "add",
+                        "iconMask": true,
+                        "text": null
+                    },
+                    "designerId": "9aecb436-37b6-4aa6-b10d-e20b6a0e96f6",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "action",
+                            "type": "string"
+                        }
+                    ]
+                },
+                {
+                    "type": "linkedinstance",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "designerId": "7b6e6b55-2bfd-41c2-b1b2-196d03991aa1",
+                    "masterInstanceId": "ExtBox1-ext-gen15131"
+                }
+            ]
+        }
+    ]
+}

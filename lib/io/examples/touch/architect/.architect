@@ -1,0 +1,65 @@
+{
+    "expandedState": {
+        "data": true,
+        "model": true,
+        "component": true,
+        "controller": true,
+        "resource": true,
+        "6504b5cd-2d15-48cd-b63d-48a6eadd89d4": {
+            "id": "6504b5cd-2d15-48cd-b63d-48a6eadd89d4",
+            "cn": [
+                {
+                    "id": "18f5a194-eab7-4663-bc62-1bcd907a9756"
+                },
+                {
+                    "id": "68e8995d-efb2-47d4-9633-71ab24debbc7",
+                    "cn": [
+                        {
+                            "id": "09013188-b47f-4b34-8769-4f41ff1a4ec6"
+                        },
+                        {
+                            "id": "9aecb436-37b6-4aa6-b10d-e20b6a0e96f6"
+                        },
+                        {
+                            "id": "7b6e6b55-2bfd-41c2-b1b2-196d03991aa1"
+                        }
+                    ]
+                }
+            ]
+        },
+        "2fd52d0a-0f4e-4f88-869a-851e3505dcc9": {
+            "id": "2fd52d0a-0f4e-4f88-869a-851e3505dcc9"
+        },
+        "26546a1e-7947-44b6-bae8-58f58cbe8860": {
+            "id": "26546a1e-7947-44b6-bae8-58f58cbe8860"
+        },
+        "63276148-6aa3-40eb-aac9-dbe4fe0d5aee": {
+            "id": "63276148-6aa3-40eb-aac9-dbe4fe0d5aee",
+            "cn": [
+                {
+                    "id": "716ac28a-8383-45ad-b307-2530cd553161"
+                }
+            ]
+        },
+        "99cd8884-3494-4f2c-9b1c-8575e021a164": {
+            "id": "99cd8884-3494-4f2c-9b1c-8575e021a164",
+            "cn": [
+                {
+                    "id": "4ba8fa76-dd72-4724-8617-a9754d4655e4"
+                },
+                {
+                    "id": "441e1be2-c707-4934-b221-387cf28834dd"
+                },
+                {
+                    "id": "4b53ef09-3edd-43b6-9b62-ca4df77658ae"
+                }
+            ]
+        },
+        "a2d7bd1f-a59f-4300-8104-adc793cf8eed": {
+            "id": "a2d7bd1f-a59f-4300-8104-adc793cf8eed"
+        },
+        "076e4278-df96-4b9e-92fa-2d95f6bfec26": {
+            "id": "076e4278-df96-4b9e-92fa-2d95f6bfec26"
+        }
+    }
+}

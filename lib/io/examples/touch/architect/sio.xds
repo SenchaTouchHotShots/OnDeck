@@ -1,0 +1,92 @@
+{
+    "name": "sio",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "/Users/jason/Desktop/app-arch-test-dep",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 637,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch20",
+    "topInstanceFileMap": {
+        "6504b5cd-2d15-48cd-b63d-48a6eadd89d4": {
+            "paths": [
+                "metadata/view/MyList",
+                "app/view/override/MyList.js",
+                "app/view/MyList.js"
+            ],
+            "className": "MyList"
+        },
+        "26546a1e-7947-44b6-bae8-58f58cbe8860": {
+            "paths": [
+                "metadata/store/MyStore",
+                "app/store/override/MyStore.js",
+                "app/store/MyStore.js"
+            ],
+            "className": "MyStore"
+        },
+        "99cd8884-3494-4f2c-9b1c-8575e021a164": {
+            "paths": [
+                "metadata/controller/MyController",
+                "app/controller/override/MyController.js",
+                "app/controller/MyController.js"
+            ],
+            "className": "MyController"
+        },
+        "63276148-6aa3-40eb-aac9-dbe4fe0d5aee": {
+            "paths": [
+                "metadata/model/MyModel",
+                "app/model/override/MyModel.js",
+                "app/model/MyModel.js"
+            ],
+            "className": "MyModel"
+        },
+        "a2d7bd1f-a59f-4300-8104-adc793cf8eed": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "2fd52d0a-0f4e-4f88-869a-851e3505dcc9": {
+            "paths": [
+                "metadata/view/sioAuthButton",
+                "app/view/override/sioAuthButton.js",
+                "app/view/sioAuthButton.js"
+            ],
+            "className": "sioAuthButton"
+        },
+        "076e4278-df96-4b9e-92fa-2d95f6bfec26": {
+            "paths": [
+                "metadata/resource/js"
+            ],
+            "className": "js"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "6504b5cd-2d15-48cd-b63d-48a6eadd89d4",
+            "2fd52d0a-0f4e-4f88-869a-851e3505dcc9"
+        ],
+        "store": [
+            "26546a1e-7947-44b6-bae8-58f58cbe8860"
+        ],
+        "controller": [
+            "99cd8884-3494-4f2c-9b1c-8575e021a164"
+        ],
+        "model": [
+            "63276148-6aa3-40eb-aac9-dbe4fe0d5aee"
+        ],
+        "resource": [
+            "a2d7bd1f-a59f-4300-8104-adc793cf8eed",
+            "076e4278-df96-4b9e-92fa-2d95f6bfec26"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

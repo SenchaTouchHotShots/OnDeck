@@ -1,0 +1,56 @@
+{
+    "type": "application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "io": [
+            "{",
+            "    appId: \"5217f781-3d3e-456a-ac24-bd415c41860d\"",
+            "}"
+        ],
+        "models": [
+            "MyModel"
+        ],
+        "stores": [
+            "MyStore"
+        ],
+        "views": [
+            "MyList",
+            "sioAuthButton"
+        ],
+        "name": "MyApp",
+        "controllers": [
+            "MyController",
+            "Ext.io.Controller"
+        ]
+    },
+    "configAlternates": {
+        "io": "object"
+    },
+    "id": "ExtBox1-ext-gen1482",
+    "designerId": "application",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "io",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "loader",
+            "reference": {
+                "name": "loader",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Loader"
+            },
+            "designerId": "9e995345-672a-4b11-8576-d9a66a388a38"
+        }
+    ]
+}

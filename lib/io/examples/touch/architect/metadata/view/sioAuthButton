@@ -1,0 +1,23 @@
+{
+    "type": "button",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "align": "right",
+        "designer|userClassName": "sioAuthButton",
+        "designer|userAlias": "sioAuthButton",
+        "text": "Login"
+    },
+    "id": "ExtBox1-ext-gen15131",
+    "designerId": "2fd52d0a-0f4e-4f88-869a-851e3505dcc9",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "align",
+            "type": "string"
+        }
+    ]
+}
